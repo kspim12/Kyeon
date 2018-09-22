@@ -1,3 +1,4 @@
-C:\node\Kyeon>node index.js
-server started
--------------------------------------------------------------------------------------
+Kyeon & Ryul Portfolio
+directed by Ryul
+
+
