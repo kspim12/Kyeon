@@ -1,0 +1,56 @@
+<html>
+<head>
+    <script>
+        var fnPrint = function(){
+            var strFeature = "width=329, height=703, all=no";
+            var image = document.getElementById('printArea6').getAttribute('src');
+            var mywindow = window.open('', 'print', strFeature);
+            mywindow.document.write("<html>");
+            mywindow.document.write("<head><title>print window</title></head>");
+            mywindow.document.write("<body>");
+            mywindow.document.write("<img src='img/portfolio/submarine.png'>");
+            mywindow.document.write("</body>");
+            mywindow.document.write("</html>");
+            mywindow.print();
+        }
+    </script>
+</head>
+<body>
+    <a href="#" onclick="VoucherPrint('img/portfolio/submarine.png'); return false;" class="myButton"> Voucher</a>
+    <img src="img/portfolio/submarine.png" alt="" id="printArea6">
+
+<script type="text/javascript">
+	function projectToPrint(source) {
+		return "<html><head><script>function step1(){\n" +
+				"setTimeout('step2()', 10);}\n" +
+				"function step2(){window.print();window.close()}\n" +
+				"</scri" + "pt></head><body onload='step1()'>\n" +
+				"<img src='" + source + "' /></body></html>";
+	}
+	function projectPrint(source) {
+		Pagelink = "about:blank";
+		var pwa = window.open(Pagelink, "print");
+		pwa.document.open();
+		pwa.document.write(projectToPrint(source));
+        pwa.document.close();
+        pwa.close();
+	}
+</script>
+<style type="text/css">
+	.myButton
+	{
+		background-color: #77b55a;
+		border: 1px solid #4b8f29;
+		display: inline-block;
+		cursor: pointer;
+		color: #f0ebf0;
+		font-family: arial;
+		font-size: 13px;
+		font-weight: bold;
+		margin: 5px;
+		padding: 7px 35px;
+		text-decoration: none;
+	}
+</style>
+</body>
+</html>
